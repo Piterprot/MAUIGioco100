@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="inizioMaui.MainPage">
+
+    <ScrollView>
+        <VerticalStackLayout
+            Padding="30,0"
+            Spacing="25">
+            <Image
+                Source="gene.png"
+                HeightRequest="185"
+                Aspect="AspectFit"
+                SemanticProperties.Description="Immagine di riempimento, mostra un genio blu" />
+
+            <Label
+                Text="Indovina il numero, da 1 a 100"
+                Style="{StaticResource Headline}"
+                SemanticProperties.HeadingLevel="Level1" />
+
+
+            <Entry
+                Placeholder="Inserisci il numero"
+                x:Name="entryNumber"
+                />
+
+            <Button
+                x:Name="bntCounter"
+                Text="Tenta la fortuna" 
+                SemanticProperties.Hint="Bottone Tenta la fortuna"
+                Clicked="btnNumber_Click"
+                HorizontalOptions="Fill" />
+
+            <Button
+                x:Name="btnNuovaPartita"
+                Text="Inizia una nuova partita" 
+                SemanticProperties.Hint="Bottone Inizia una nuova partita"
+                Clicked="btnNuovaPartita_Clicked"
+                HorizontalOptions="Fill" 
+                IsVisible="False"
+                />
+
+            <Label x:Name="lblHint"/>
+            <Label x:Name="lblTentativi"/>
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>
